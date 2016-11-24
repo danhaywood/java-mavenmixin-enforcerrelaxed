@@ -13,7 +13,7 @@
     
     <name>${project.groupId}:${project.artifactId}</name>
     <description>
-        Maven mixin providing the ability to run various static analysis plugins
+        Maven mixin that applies the maven enforcer plugin (but with relaxed dependency convergence) 
     </description>
     
     <url>https://github.com/danhaywood/java-mavenmixin-enforcerrelaxed</url>
