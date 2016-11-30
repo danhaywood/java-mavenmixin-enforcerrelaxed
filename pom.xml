@@ -37,17 +37,18 @@
         </developer>
     </developers>    
     
-    <properties>
-    </properties>
-    
     <profiles>
         <profile>
-            <id>danhaywood-mavenmixin-enforcerrelaxed</id>
+            <id>mavenmixin-enforcerrelaxed</id>
             <activation>
                 <property>
-                    <name>!skip.danhaywood-mavenmixin-enforcerrelaxed</name>
+                    <name>!skip.mavenmixin-enforcerrelaxed</name>
                 </property>
             </activation>
+
+            <properties>
+                <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
+            </properties>
 
 			<build>
 				<plugins>
@@ -55,7 +56,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-enforcer-plugin</artifactId>
-						<version>1.4.1</version>
+						<version>${maven-enforcer-plugin.version}</version>
 						<configuration>
 							<rules>
 								<requireMavenVersion>
